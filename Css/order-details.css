@@ -1,0 +1,417 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFBF78;
+}
+
+.navbar-brand{
+    color: white;
+    background-color: #000000;
+    padding: 30px; 
+    display: flex;
+    justify-content: flex-start;
+    text-align: center;
+} 
+
+.navbar-brand h1 {
+    text-align: center;
+    margin: 1=0px 0;
+    margin-left: 10px;
+    
+}
+
+.Search {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.Search-bar {
+    padding: 10px;
+    font-size: 16px;
+    width: 300px;
+    margin-right: 10px;
+    border-radius: 30px;
+    border: none;
+    background-color: rgb(247, 247, 247);
+}
+
+.Search-bar:hover{
+    cursor: pointer;
+}
+
+.Search-butt {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 30px;
+    border: none;
+    color: white;
+    background-color: #F05941
+}
+
+.Search-butt:hover{
+    cursor: pointer;
+}
+
+.Category-Content h2 {
+    margin-bottom: 20px;
+}
+
+.categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.category-item {
+    margin: 10px;
+    text-align: center;
+    flex: 1 0 20%; 
+    max-width: 150px;
+}
+
+.img-Cate {
+    display: block;
+    margin: 0 auto 10px auto;
+    border-radius: 20px;
+}
+
+.Daily-Discover{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.Discover-item{
+    margin: 10px;
+    /* ข้อความใต้ภาพ */
+    text-align: center; 
+    flex: 1 0 20%; 
+}
+
+.img-Dis {
+    display: block;
+    margin: 0 auto 10px auto;
+    border-radius: 20px;
+    border-radius: 20px;
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #f8f8f8ec;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: rgb(10, 10, 10);
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #575757;
+}
+
+.main-content {
+    transition: margin-left 0.5s;
+    padding: 20px;
+}
+
+.sidebar .close-btn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color: rgb(0, 0, 0);
+}
+
+.open-btn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #F05941;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+}
+
+.open-btn:hover {
+    background-color: #e2e2e2;
+    color: black;
+}
+
+/* ผลลัพธ์ที่แสดงผลจากการดึงฐานข้อมูล */
+#search-results {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; /* จัดเรียงรายการให้ตรงกลาง */
+}
+
+.product-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    width: calc(33% - 20px); /* แสดง 3 คอลัมน์ */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* จัดแนวเนื้อหาให้อยู่ตรงกลาง */
+    text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
+}
+
+.product-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.product-item img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.product-item h3 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.product-item p {
+    margin: 5px 0;
+    color: #555;
+}
+
+/* สำหรับหน้าจอเล็ก */
+@media (max-width: 768px) {
+    .product-item {
+        width: calc(50% - 20px); /* แสดง 2 คอลัมน์ */
+    }
+}
+
+/* สำหรับหน้าจอมือถือ */
+@media (max-width: 480px) {
+    .product-item {
+        width: 100%; /* แสดง 1 คอลัมน์ */
+    }
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar-brand {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #000000;
+  color: white;
+}
+
+.container {
+  position: relative;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.steps {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  margin: 20px auto;
+}
+
+.step {
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  border: 2px solid #ACACA6;
+  border-radius: 50%;
+  transition: background 2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.step.selected {
+  border: 3px solid #4B81BD;   
+}
+
+.step.completed {
+  border: 3px solid #4B81BD;
+  background: #4B81BD; 
+}
+
+.progress {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  height: 10px;
+  border-bottom: 2px solid #ACACA6;
+  z-index: -1;
+}
+
+.percent {
+  position: absolute;
+  width: 0;
+  height: 100%;
+  border-bottom: 2px solid #4B81BD;
+  z-index: 1;
+  transition: width 1s;
+}
+
+.description {
+  position: absolute;
+  font-weight: bolder;
+  top: 60px;
+  width: 100px;
+  text-align: center;
+  font-size: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.detail {
+  padding: 20px;
+}
+
+.detail h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.order-detail {
+  display: flex;
+  align-items: center;
+}
+
+.img-detail {
+  width: 150px;
+  height: auto;
+  margin-right: 20px;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+.product-info {
+  flex-grow: 1;
+}
+
+.price {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.address, .pay-detail {
+  padding: 20px;
+  background: #f9f9f9;
+  margin: 20px 0;
+}
+
+.address h4, .pay-detail h4 {
+  margin-bottom: 10px;
+}
+
+.price-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+  background: #fff;
+}
+
+.butt-order {
+  padding: 10px 20px;
+  background-color: #E4003A;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: larger;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .steps {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .progress {
+    width: 100%;
+  }
+
+  .step {
+    width: 40px;
+    height: 40px;
+  }
+
+  .description {
+    font-size: 10px;
+    top: 50px;
+  }
+
+  .detail, .address, .pay-detail, .footer {
+    padding: 10px;
+  }
+
+  .img-detail {
+    width: 100px;
+  }
+
+  .product-info p, .price-item p {
+    font-size: 14px;
+  }
+
+  .butt-order {
+    padding: 10px 15px;
+    font-size: medium;
+  }
+}
+
+.below-footer {
+    background-color: #000000;
+    padding: 10px;
+    text-align: center;
+    border-top: 1px solid #ccc;
+}
+
+.back-button a{ 
+    color: white; /* ตั้งค่าสีฟอนต์เป็นสีขาว */
+    text-decoration: none; /* ลบขีดเส้นใต้ของลิงก์ */
+    font-size: 16px; /* ตั้งค่าขนาดฟอนต์ */
+    padding: 10px 20px; /* เพิ่มการเว้นระยะห่างภายในลิงก์ */
+    background-color: #007BFF; /* ตั้งค่าสีพื้นหลังของลิงก์ */
+    border-radius: 5px; /* เพิ่มขอบมนให้กับลิงก์ */
+    display: inline-block; /* ทำให้ลิงก์แสดงเป็นบล็อก */
+}
+
+.back-button a:hover {
+    background-color: #FFBF78; /* เปลี่ยนสีพื้นหลังเมื่อเอาเมาส์ไปวาง */
+}
+
+.button-flexstart {
+    display: flex;
+    justify-content:flex-start;
+    margin-left: 10px;
+}
+

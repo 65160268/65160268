@@ -1,0 +1,131 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    }
+    
+    header {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+        background-color: #000000;
+    }
+    
+    .back-button a{ 
+        color: white; /* ตั้งค่าสีฟอนต์เป็นสีขาว */
+        text-decoration: none; /* ลบขีดเส้นใต้ของลิงก์ */
+        font-size: 16px; /* ตั้งค่าขนาดฟอนต์ */
+        padding: 10px 20px; /* เพิ่มการเว้นระยะห่างภายในลิงก์ */
+        background-color: #007BFF; /* ตั้งค่าสีพื้นหลังของลิงก์ */
+        border-radius: 5px; /* เพิ่มขอบมนให้กับลิงก์ */
+        display: inline-block; /* ทำให้ลิงก์แสดงเป็นบล็อก */
+    }
+    
+    .back-button a:hover {
+        background-color: #FFBF78; /* เปลี่ยนสีพื้นหลังเมื่อเอาเมาส์ไปวาง */
+    }
+    
+    .container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 50px;
+    }
+    
+    .sidebar, .main-content {
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        width: 32%;
+    }
+    
+    .sidebar {
+        flex: 1;
+        margin: 0 10px;
+    }
+    
+    .main-content {
+        flex: 2;
+    }
+    
+    .methods div, .details div {
+        margin: 10px 0;
+        cursor: pointer;
+    }
+    
+    .card-details form {
+        margin-top: 20px;
+    }
+    
+    .card-details p, .c-details p {
+        margin: 10px 0;
+    }
+    
+    .card-details input, .email input {
+        width: calc(100% - 10px);
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    
+    .card-details button {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin-top: 20px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    
+    .card-details button:hover {
+        background-color: #E4003A;
+    }
+    
+    hr {
+        margin: 10px 15px;
+        border: 1px solid #ccc;
+    }
+    
+    .ss {
+        width: 150px;
+    }
+    
+    .footer {
+        padding: 30px;
+        background-color: #000000;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        margin-top: 20px;
+    }
+    
+    .social-share {
+        display: flex;
+        align-items: center;
+    }
+    
+    .social-share img {
+        margin: 0 5px;
+        width: 24px;
+        height: 24px;
+    }
+    
+    .social-share .separator {
+        margin: 0 10px;
+    }
+    
+    .favorite {
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+    }
+    
+    .favorite img {
+        margin-right: 5px;
+    }
